@@ -202,6 +202,7 @@ function stringInFile($string,$file)
 
 function getNewHash($type,$length=10)
 {
+    if (defined('FILE_LENGHT')) $length = FILE_LENGHT;
 	while(1)
 	{
 		$hash = getRandomString($length).'.'.$type;
